@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/<your-username>/<your-repo>.git'
+                git branch: 'main', url: 'https://github.com/snalluri96/docker-ecr-jenkins.git'
             }
         }
 
@@ -28,14 +28,3 @@ pipeline {
                 docker login --username AWS --password-stdin $ECR_REPO
                 '''
             }
-        }
-
-        stage('Push to ECR') {
-            steps {
-                script {
-                    dockerImage.push("latest")
-                }
-            }
-        }
-    }
-}
