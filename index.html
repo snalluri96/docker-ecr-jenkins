@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Web App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-12 max-w-2xl w-full text-center space-y-6 transform transition-all duration-300 hover:scale-105">
+
+        <h1 class="text-3xl md:text-5xl font-bold text-gray-800 dark:text-white">
+            Hello, Jenkins!
+        </h1>
+
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            This is a simple web application deployed automatically via a Jenkins CI/CD pipeline.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-md transition-transform duration-200 transform hover:scale-110">
+                Get Started
+            </button>
+            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors duration-200">
+                Learn More
+            </a>
+        </div>
+        
+    </div>
+
+</body>
+</html>
