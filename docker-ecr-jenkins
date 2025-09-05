@@ -9,13 +9,15 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/<your-username>/<your-repo>.git'
+                // Replace with your actual GitHub repo
+                git branch: 'main', url: 'https://github.com/snalluri96/docker-ecr-jenkins.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 script {
+                    // Build Docker image and tag it with ECR repo
                     dockerImage = docker.build("${ECR_REPO}:latest")
                 }
             }
@@ -33,6 +35,7 @@ pipeline {
         stage('Push to ECR') {
             steps {
                 script {
+                    // Push Docker image to ECR
                     dockerImage.push("latest")
                 }
             }
